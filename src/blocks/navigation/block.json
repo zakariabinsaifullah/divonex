@@ -1,0 +1,75 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "divonex/navigation",
+    "version": "0.1.0",
+    "title": "Navigation",
+    "category": "divonex",
+    "description": "Classic Navigation for Divonex Theme",
+    "example": {},
+    "supports": {
+        "anchor": true,
+        "className": true,
+        "align": ["wide", "full"],
+        "ariaLabel": true
+    },
+    "attributes": {
+        "blockStyle": {
+            "type": "object"
+        },
+        "selectedMenu": {
+            "type": "string"
+        },
+        "alignment": {
+            "type": "string",
+            "default": "flex-start"
+        },
+        "offCanvasMenu": {
+            "type": "string",
+            "default": "mobile"
+        },
+        "offCanvasPosition": {
+            "type": "string",
+            "default": "right"
+        },
+        "colors": {
+            "type": "object",
+            "default": {
+                "text": "",
+                "bg": "",
+                "textHover": "",
+                "bgHover": ""
+            }
+        },
+        "offCanvasMenuColors": {
+            "type": "object",
+            "default": {
+                "text": "",
+                "bg": "",
+                "textHover": "",
+                "bgHover": ""
+            }
+        },
+        "offCanvasColors": {
+            "type": "object",
+            "default": {
+                "overlayBg": "",
+                "barsColor": "",
+                "close": ""
+            }
+        },
+        "dropdownBorder": {
+            "type": "string",
+            "default": ""
+        },
+        "dropdownBorderRadius": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "textdomain": "divonex",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css",
+    "viewScript": "file:./view.js",
+    "render": "file:./render.php"
+}

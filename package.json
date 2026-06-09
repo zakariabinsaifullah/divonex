@@ -1,0 +1,42 @@
+{
+    "name": "divonex",
+    "version": "0.1.0",
+    "description": "Divonex Modern WordPress Block Theme",
+    "author": "Binsaifullah",
+    "license": "GPL-2.0-or-later",
+    "main": "build/index.js",
+    "scripts": {
+        "build": "wp-scripts build --blocks-manifest",
+        "format": "wp-scripts format",
+        "lint:css": "wp-scripts lint-style",
+        "lint:js": "wp-scripts lint-js",
+        "packages-update": "wp-scripts packages-update",
+        "plugin-zip": "wp-scripts plugin-zip",
+        "start": "wp-scripts start --blocks-manifest"
+    },
+    "prettier": {
+        "arrowParens": "avoid",
+        "bracketSpacing": true,
+        "htmlWhitespaceSensitivity": "css",
+        "insertPragma": false,
+        "jsxBracketSameLine": false,
+        "jsxSingleQuote": false,
+        "printWidth": 140,
+        "proseWrap": "preserve",
+        "quoteProps": "as-needed",
+        "requirePragma": false,
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "none",
+        "useTabs": false,
+        "rangeStart": 0
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^30.21.0"
+    },
+    "dependencies": {
+        "@wordpress/server-side-render": "^6.5.0",
+        "classnames": "^2.5.1"
+    }
+}

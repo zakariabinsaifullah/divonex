@@ -1,0 +1,188 @@
+{
+    "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+    "version": 3,
+    "title": "Divonex",
+    "customTemplates": [
+        {
+            "name": "page-no-title",
+            "postTypes": ["page"],
+            "title": "Page No Title"
+        }
+    ],
+    "settings": {
+        "appearanceTools": true,
+        "layout": {
+            "contentSize": "1200px",
+            "wideSize": "1340px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "color": "#000000",
+                    "name": "Black",
+                    "slug": "divo-black"
+                },
+                {
+                    "color": "#ffffff",
+                    "name": "White",
+                    "slug": "divo-white"
+                },
+                {
+                    "color": "#142135",
+                    "name": "Oxford",
+                    "slug": "oxford"
+                },
+                {
+                    "color": "#FFFEF8",
+                    "name": "Off-white",
+                    "slug": "off-white"
+                },
+                {
+                    "color": "#7f8c8d",
+                    "name": "Cadet",
+                    "slug": "cadet"
+                },
+                {
+                    "color": "#F2B705",
+                    "name": "Zanthous",
+                    "slug": "zanthous"
+                },
+                {
+                    "color": "#DFDCD7",
+                    "name": "Base",
+                    "slug": "base"
+                },
+                {
+                    "color": "#191919",
+                    "name": "Contrast",
+                    "slug": "contrast"
+                },
+                {
+                    "color": "#b0b8bd",
+                    "name": "Text Muted",
+                    "slug": "text-muted"
+                },
+                {
+                    "color": "#f5f1e9",
+                    "name": "Background",
+                    "slug": "background"
+                }
+            ]
+        },
+        "typography": {
+             "defaultFontSizes": false,
+            "fontFamilies": [
+                {
+                    "name": "UtileDisplay",
+                    "slug": "utile-display",
+                    "fontFamily": "UtileDisplay, sans-serif",
+                    "fontFace": [
+                        {
+                            "src": ["file:./assets/fonts/UtileDisplay-Regular.woff2"],
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontFamily": "UtileDisplay"
+                        },
+                        {
+                            "src": ["file:./assets/fonts/UtileDisplay-Medium.woff2"],
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "fontFamily": "UtileDisplay"
+                        }
+                    ]
+                },
+                {
+                    "name": "Matter",
+                    "slug": "matter",
+                    "fontFamily": "Matter, sans-serif",
+                    "fontFace": [
+                        {
+                            "src": ["file:./assets/fonts/Matter-Regular.otf"],
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "fontFamily": "Matter"
+                        }
+                    ]
+                }
+            ],
+            "fontSizes": [
+                 {
+                    "fluid": false,
+                    "name": "Small",
+                    "size": "0.875rem",
+                    "slug": "divo-small"
+                },
+                {
+                    "fluid": {
+                        "max": "1.125rem",
+                        "min": "1rem"
+                    },
+                    "name": "Medium",
+                    "size": "1rem",
+                    "slug": "divo-medium"
+                },
+                {
+                    "fluid": {
+                        "max": "1.375rem",
+                        "min": "1.125rem"
+                    },
+                    "name": "Large",
+                    "size": "1.38rem",
+                    "slug": "divo-large"
+                },
+                {
+                    "fluid": {
+                        "max": "64px",
+                        "min": "38px"
+                    },
+                    "name": "Extra Large",
+                    "size": "64px",
+                    "slug": "divo-x-large"
+                }
+            ]
+        },
+        "spacing": {
+            "spacingSizes": [
+                { "name": "Edge", "size": "15px", "slug": "edge" },
+                { "name": "Elements Gap", "size": "24px", "slug": "elements-gap" },
+                { "name": "Standard", "size": "50px", "slug": "standard" },
+                { "name": "Section", "size": "100px", "slug": "section" }
+            ]
+        }
+    },
+    "styles": {
+        "spacing": {
+            "blockGap": "0",
+            "margin": {
+                "top": "0",
+                "bottom": "0"
+            },
+            "padding": {
+                "top": "0",
+                "bottom": "0"
+            }
+        },
+        "color": {
+            "text": "var:preset|color|contrast",
+            "background": "var:preset|color|background"
+        },
+        "typography": {
+            "fontFamily": "var:preset|font-family|matter",
+            "lineHeight": "1.5"
+        },
+        "elements": {
+            "button": {
+                "typography": {
+                    "fontFamily": "var:preset|font-family|matter",
+                    "fontWeight": "500"
+                }
+            },
+            "heading": {
+                "typography": {
+                    "fontFamily": "var:preset|font-family|utile-display",
+                    "fontWeight": "500"
+                }
+            }
+        }
+    }
+}
