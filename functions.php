@@ -104,15 +104,9 @@ function divonex_register_blocks() {
 	if ( is_dir( __DIR__ . '/build/blocks' ) ) {
 		if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) && file_exists( __DIR__ . '/build/blocks-manifest.php' ) ) {
 			wp_register_block_types_from_metadata_collection( __DIR__ . '/build/blocks', __DIR__ . '/build/blocks-manifest.php' );
-			return;
-		}
-
-		if ( function_exists( 'wp_register_block_metadata_collection' ) && file_exists( __DIR__ . '/build/blocks-manifest.php' ) ) {
+		} elseif ( function_exists( 'wp_register_block_metadata_collection' ) && file_exists( __DIR__ . '/build/blocks-manifest.php' ) ) {
 			wp_register_block_metadata_collection( __DIR__ . '/build/blocks', __DIR__ . '/build/blocks-manifest.php' );
-			return;
-		}
-
-		if ( file_exists( __DIR__ . '/build/blocks-manifest.php' ) ) {
+		} elseif ( file_exists( __DIR__ . '/build/blocks-manifest.php' ) ) {
 			$manifest_data = require __DIR__ . '/build/blocks-manifest.php';
 			foreach ( array_keys( $manifest_data ) as $block_type ) {
 				register_block_type( __DIR__ . "/build/blocks/{$block_type}" );
@@ -131,6 +125,17 @@ function divonex_register_blocks() {
 	}
 }
 add_action( 'init', 'divonex_register_blocks' );
+
+function divonex_localize_scripts() {
+	wp_localize_script(
+		'divonex-navigation-editor-script',
+		'divonex',
+		array(
+			'menus' => divonex_get_menus(),
+		)
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'divonex_localize_scripts' );
 
 /**
  * Register Divonex Category

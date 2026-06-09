@@ -51,7 +51,7 @@ export default function Edit({ attributes, setAttributes }) {
         setAttributes({ blockStyle: { customCSS } });
     }, [alignment, colors, offCanvasMenuColors, offCanvasColors]);
 
-    const navMenus = divonex.menus
+    const navMenus = (typeof divonex !== 'undefined' && divonex.menus)
         ? divonex.menus
         : [
               {
